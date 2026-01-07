@@ -60,7 +60,6 @@ const Footer = () => {
 
             <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600 relative z-10">
                 <p>© 2026 Pink Energy Dance Company. Todos los derechos reservados.</p>
-                <p>Designed with ❤️ by Antigravity</p>
             </div>
 
             {/* Decor text */}
