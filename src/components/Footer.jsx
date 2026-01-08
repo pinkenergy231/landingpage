@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTiktok } from 'react-icons/fa';
 const logo = "/logo2.png";
 
 const Footer = () => {
@@ -17,8 +17,11 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-4">
                         {/* Social Icons */}
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
+                        <a href="https://www.instagram.com/_pink.energy?igsh=eHE0NGRpZ3B0YXVz&utm_source=qr" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
                             <FaInstagram size={20} />
+                        </a>
+                        <a href="https://www.tiktok.com/@_pink.energy?_r=1&_t=ZS-92sx4nSWWUm" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
+                            <FaTiktok size={18} />
                         </a>
                         <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
                             <FaFacebookF size={18} />
@@ -44,11 +47,11 @@ const Footer = () => {
                 <div className="flex flex-col gap-6">
                     <h4 className="text-white font-bold text-lg">Contacto</h4>
                     <div className="flex flex-col gap-3">
-                        <a href="tel:+521234567890" className="text-gray-400 hover:text-brand-pink transition-colors font-medium flex items-center gap-2">
-                            <span className="text-brand-pink"><FaPhoneAlt /></span> +52 123 456 7890
+                        <a href="tel:+528342660194" className="text-gray-400 hover:text-brand-pink transition-colors font-medium flex items-center gap-2">
+                            <span className="text-brand-pink"><FaPhoneAlt /></span> +52 834 266 0194
                         </a>
-                        <a href="mailto:info@pinkenergy.com" className="text-gray-400 hover:text-brand-pink transition-colors font-medium flex items-center gap-2">
-                            <span className="text-brand-pink"><FaEnvelope /></span> info@pinkenergy.com
+                        <a href="mailto:pinkenergydancecompany@gmail.com" className="text-gray-400 hover:text-brand-pink transition-colors font-medium flex items-center gap-2">
+                            <span className="text-brand-pink"><FaEnvelope /></span> pinkenergydancecompany@gmail.com
                         </a>
                         <p className="text-gray-500 text-sm mt-2 flex items-start gap-2">
                             <span className="text-brand-pink mt-1"><FaMapMarkerAlt /></span> Av. Siempre Viva 123,<br />Col. Centro, CDMX
@@ -69,7 +72,7 @@ const Footer = () => {
 
             {/* WhatsApp Floating Button */}
             <motion.a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/528342660194"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 10 }}
