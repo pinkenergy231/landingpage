@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaGlobe, FaTiktok, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaGlobe, FaTiktok, FaEnvelope, FaFacebook } from 'react-icons/fa';
 
 const logo = "/logo2.png";
 
@@ -9,9 +9,10 @@ const LinksPage = () => {
     const links = [
         { name: 'WhatsApp', url: 'https://wa.me/528342660194', icon: <FaWhatsapp />, color: 'border-green-500', textColor: 'text-green-500' },
         { name: 'Instagram', url: 'https://www.instagram.com/_pink.energy?igsh=eHE0NGRpZ3B0YXVz&utm_source=qr', icon: <FaInstagram />, color: 'border-pink-500', textColor: 'text-pink-500' },
+        { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61583989899614&mibextid=wwXIfr&rdid=w7PzfAwCgDiPbLmV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A816qC2BS%2F%3Fmibextid%3DwwXIfr#', icon: <FaFacebook />, color: 'border-blue-600', textColor: 'text-blue-600' },
         { name: 'TikTok', url: 'https://www.tiktok.com/@_pink.energy?_r=1&_t=ZS-92sx4nSWWUm', icon: <FaTiktok />, color: 'border-cyan-500', textColor: 'text-cyan-400' },
         { name: 'Correo', url: 'mailto:pinkenergydancecompany@gmail.com', icon: <FaEnvelope />, color: 'border-red-500', textColor: 'text-red-500' },
-        { name: 'Ubicación', url: 'https://maps.google.com', icon: <FaMapMarkerAlt />, color: 'border-blue-500', textColor: 'text-blue-500' },
+        { name: 'Ubicación', url: 'https://maps.app.goo.gl/RDHSpp76YeBwvrBJ8', icon: <FaMapMarkerAlt />, color: 'border-blue-500', textColor: 'text-blue-500' },
         { name: 'Sitio Web Principal', url: '/', icon: <FaGlobe />, color: 'border-purple-500', textColor: 'text-purple-500' },
     ];
 

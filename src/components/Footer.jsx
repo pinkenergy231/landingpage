@@ -23,7 +23,7 @@ const Footer = () => {
                         <a href="https://www.tiktok.com/@_pink.energy?_r=1&_t=ZS-92sx4nSWWUm" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
                             <FaTiktok size={18} />
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
+                        <a href="https://www.facebook.com/profile.php?id=61583989899614&mibextid=wwXIfr&rdid=w7PzfAwCgDiPbLmV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A816qC2BS%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
                             <FaFacebookF size={18} />
                         </a>
                         <a href="https://youtube.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-pink hover:scale-110 transition-all cursor-pointer">
@@ -53,9 +53,9 @@ const Footer = () => {
                         <a href="mailto:pinkenergydancecompany@gmail.com" className="text-gray-400 hover:text-brand-pink transition-colors font-medium flex items-center gap-2">
                             <span className="text-brand-pink"><FaEnvelope /></span> pinkenergydancecompany@gmail.com
                         </a>
-                        <p className="text-gray-500 text-sm mt-2 flex items-start gap-2">
-                            <span className="text-brand-pink mt-1"><FaMapMarkerAlt /></span> Av. Siempre Viva 123,<br />Col. Centro, CDMX
-                        </p>
+                        <a href="https://maps.app.goo.gl/RDHSpp76YeBwvrBJ8" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand-pink transition-colors text-sm mt-2 flex items-start gap-2">
+                            <span className="text-brand-pink mt-1"><FaMapMarkerAlt /></span> Calle Gral. L. Valle Nte.,<br />3 Aldama y Mina, Zona Centro,<br />87000 Cdad. Victoria, Tamps.
+                        </a>
                     </div>
                 </div>
 

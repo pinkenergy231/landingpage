@@ -5,7 +5,7 @@ import heroBg from '../assets/hero_bg_hd.png';
 
 const Hero = () => {
     return (
-        <section id="inicio" className="relative w-full h-screen min-h-[700px] flex items-center overflow-hidden bg-black">
+        <section id="inicio" className="relative w-full min-h-screen flex items-center overflow-hidden bg-black">
 
             {/* Background Image - Full Cover */}
             <div className="absolute inset-0 z-0">
@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
 
             {/* Content Container - Removed Grid, allowing content to breathe */}
-            <div className="relative z-10 w-full px-6 lg:px-12 flex flex-col justify-center h-full pt-20">
+            <div className="relative z-10 w-full px-6 lg:px-12 flex flex-col justify-center h-full pt-40 md:pt-48 pb-32">
 
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -34,7 +34,7 @@ const Hero = () => {
                         className="flex items-center gap-4 mb-4"
                     >
                         <div className="h-[2px] w-16 bg-brand-pink shadow-[0_0_10px_#FF007F]"></div>
-                        <span className="text-white tracking-[0.3em] text-sm font-bold uppercase drop-shadow-md">Professional Dance Studio</span>
+                        <span className="text-white tracking-[0.3em] text-sm font-bold uppercase drop-shadow-md">Nueva Academia en Cd. Victoria</span>
                     </motion.div>
 
                     <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] mb-8 drop-shadow-2xl">
@@ -46,8 +46,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-gray-200 text-xl md:text-2xl max-w-xl leading-relaxed mb-10 font-light drop-shadow-lg">
-                        Únete a la academia más prestigiosa y <span className="text-brand-pink font-semibold">siente la energía</span>.
-                        Transformamos el movimiento en arte puro.
+                        Sé parte del inicio de algo extraordinario. <span className="text-brand-pink font-semibold">Únete a la nueva comunidad</span> de danza y siente la energía desde el primer paso.
                     </p>
 
                     <div className="flex flex-wrap gap-6">

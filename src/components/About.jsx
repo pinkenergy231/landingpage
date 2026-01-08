@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import teaImg from '../assets/team_photo.png';
+import teamImg from '../assets/nosotros.jpg';
+import TeamCarousel from './TeamCarousel';
 
 const About = () => {
     return (
@@ -21,12 +22,14 @@ const About = () => {
 
                     <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-700">
                         <img
-                            src={teaImg}
+                            src={teamImg}
                             alt="Equipo Pink Energy"
                             className="w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />
                         <div className="absolute inset-0 bg-brand-pink/10 mix-blend-overlay"></div>
                     </div>
+
+
                 </motion.div>
 
                 {/* Text Side */}
@@ -49,26 +52,36 @@ const About = () => {
                     </h3>
 
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg font-light">
-                        La academia <strong className="text-white">Pink Energy</strong> nace con la misión de inspirar a bailarines de todas las edades.
-                        Contamos con instructores certificados apasionados por compartir su conocimiento y ver crecer a cada alumno.
+                        <strong className="text-white">Pink Energy</strong> llega para traer una nueva vibra a la ciudad. Somos un proyecto joven nacido de la pasión por el movimiento, creado para inspirar y potenciar el talento de cada alumno desde cero.
                     </p>
                     <p className="text-gray-400 mb-8 leading-relaxed font-light">
-                        Mas que una escuela, somos una familia donde la disciplina y la diversión se unen para crear artistas completos.
+                        Aquí comenzamos juntos una nueva historia. Buscamos construir una comunidad unida donde la disciplina técnica se combina con la diversión y la energía positiva en cada clase.
                     </p>
 
                     <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
                         <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
-                            <h4 className="text-brand-pink font-black text-4xl mb-1">10+</h4>
-                            <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Años de experiencia</p>
+                            <h4 className="text-brand-pink font-black text-xl md:text-2xl mb-2">Atención Total</h4>
+                            <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Grupos Reducidos</p>
                         </div>
                         <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
-                            <h4 className="text-brand-pink font-black text-4xl mb-1">500+</h4>
-                            <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Alumnos graduados</p>
+                            <h4 className="text-brand-pink font-black text-xl md:text-2xl mb-2">100% Pasión</h4>
+                            <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Energía Pura</p>
                         </div>
                     </div>
                 </motion.div>
 
             </div>
+
+            {/* Team Carousel (Below Grid) */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="w-full max-w-4xl mx-auto mt-12 md:mt-20"
+            >
+                <TeamCarousel />
+            </motion.div>
         </section>
     );
 };
