@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Button from './Button';
 const logo = "/logo2.png";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,6 +17,27 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsMobileMenuOpen(false);
+        } else {
+            // If we are not on home or element not found, go to home
+            if (location.pathname !== '/') {
+                navigate('/');
+                // Optional: Try to scroll after nav (would appreciate a context/state solution but keeping it simple for now as Navbar is mainly on Home)
+                setTimeout(() => {
+                    const elem = document.getElementById(targetId);
+                    if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    };
 
     const navItems = [
         { name: 'Inicio', href: '#inicio' },
@@ -55,14 +78,21 @@ const Navbar = () => {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="hover:text-brand-pink transition-colors relative group"
+                                onClick={(e) => handleNavClick(e, item.href)}
+                                className="hover:text-brand-pink transition-colors relative group cursor-pointer"
                             >
                                 {item.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-pink transition-all group-hover:w-full duration-300"></span>
                             </a>
                         )
                     ))}
-                    <Button variant="primary" className="text-sm px-6 py-2">Agenda tu Clase</Button>
+                    <Button
+                        variant="primary"
+                        className="text-sm px-6 py-2"
+                        onClick={(e) => handleNavClick(e, '#contacto')}
+                    >
+                        Agenda tu Clase
+                    </Button>
                 </div>
 
                 {/* Mobile menu button */}
@@ -105,14 +135,19 @@ const Navbar = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-3xl font-bold text-white hover:text-brand-pink transition-colors"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={(e) => handleNavClick(e, item.href)}
+                                    className="text-3xl font-bold text-white hover:text-brand-pink transition-colors cursor-pointer"
                                 >
                                     {item.name}
                                 </a>
                             )
                         ))}
-                        <Button variant="primary" onClick={() => setIsMobileMenuOpen(false)}>Agenda tu Clase</Button>
+                        <Button
+                            variant="primary"
+                            onClick={(e) => handleNavClick(e, '#contacto')}
+                        >
+                            Agenda tu Clase
+                        </Button>
                     </motion.div>
                 )}
             </AnimatePresence>
