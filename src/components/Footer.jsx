@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="col-span-1 md:col-span-2">
                     <img src={logo} alt="Pink Energy" className="h-16 w-auto mb-6 object-contain" />
                     <p className="text-gray-400 text-sm max-w-sm leading-relaxed mb-6">
-                        Transformando energía en movimiento desde 2010. Únete a la comunidad de danza más vibrante de la ciudad.
+                        Transformando energía en movimiento. Únete al inicio de la comunidad de danza más vibrante de la ciudad.
                     </p>
                     <div className="flex gap-4">
                         {/* Social Icons */}
