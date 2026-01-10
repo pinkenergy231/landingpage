@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import balletImg from '../assets/ballet_class.png';
 import jazzImg from '../assets/jazz_class.png';
-import hiphopImg from '../assets/hiphop_class.png';
+import jazzBoysImg from '../assets/jazz_boys.png';
+import jazzMomsImg from '../assets/jazz_moms.png';
+import gymnasticsImg from '../assets/gymnastics.png';
+import fitnessImg from '../assets/fitness.png';
 
 const ClassCard = ({ title, image, description, index }) => (
     <motion.div
@@ -39,9 +41,11 @@ const ClassCard = ({ title, image, description, index }) => (
 
 const Classes = () => {
     const classes = [
-        { title: 'Ballet Clásico', image: balletImg, description: 'La base de toda danza. Perfecciona tu técnica, postura y elegancia con nuestros maestros.' },
-        { title: 'Jazz Contemporáneo', image: jazzImg, description: 'Fusión de estilos. Energía, expresión y libertad de movimiento en cada coreografía.' },
-        { title: 'Hip-Hop Urbano', image: hiphopImg, description: 'Ritmo puro. Aprende los estilos más actuales y desarrolla tu propio flow en la pista.' }
+        { title: 'Jazz', image: jazzImg, description: 'Fusión de estilos. Energía, expresión y libertad de movimiento en cada coreografía.' },
+        { title: 'Jazz Boys', image: jazzBoysImg, description: 'Potencia y ritmo para ellos. Un espacio para desarrollar fuerza, coordinación y estilo urbano.' },
+        { title: 'Jazz Moms', image: jazzMomsImg, description: '¡Zumba y diversión! Libera estrés, tonifica tu cuerpo y disfruta del baile en nuestra comunidad de mamás.' },
+        { title: 'Gimnasia', image: gymnasticsImg, description: 'Flexibilidad y acrobacia. Desarrolla control corporal, equilibrio y destrezas impresionantes.' },
+        { title: 'Acondicionamiento Físico', image: fitnessImg, description: 'Fuerza y resistencia. Entrenamientos intensos diseñados para mejorar tu rendimiento como bailarín.' }
     ];
 
     return (
