@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from './Button';
 import heroBg from '../assets/hero_bg_hd.png';
+import ScheduleModal from './ScheduleModal';
 
 const Hero = () => {
+    const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+
     return (
         <section id="inicio" className="relative w-full min-h-screen flex items-center overflow-hidden bg-black">
 
@@ -53,12 +56,19 @@ const Hero = () => {
                         <Button variant="primary" className="text-lg px-12 py-4 shadow-[0_0_20px_rgba(255,0,127,0.6)] hover:shadow-[0_0_30px_rgba(255,0,127,0.8)] hover:scale-105 transition-transform">
                             Agenda tu Clase
                         </Button>
-                        <Button variant="secondary" className="text-lg px-12 py-4 backdrop-blur-sm hover:bg-white/10">
+                        <Button
+                            variant="secondary"
+                            className="text-lg px-12 py-4 backdrop-blur-sm hover:bg-white/10"
+                            onClick={() => setIsScheduleOpen(true)}
+                        >
                             Ver Horarios
                         </Button>
                     </div>
                 </motion.div>
             </div>
+
+            {/* Schedule Modal */}
+            <ScheduleModal isOpen={isScheduleOpen} onClose={() => setIsScheduleOpen(false)} />
         </section>
     );
 };
