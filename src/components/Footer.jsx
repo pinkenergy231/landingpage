@@ -3,7 +3,30 @@ import { motion } from 'framer-motion';
 import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTiktok } from 'react-icons/fa';
 const logo = "/logo2.png";
 
+import { useNavigate, useLocation } from 'react-router-dom';
+
 const Footer = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => {
+                    const elem = document.getElementById(targetId);
+                    if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    };
+
     return (
         <footer id="contacto" className="bg-[#020202] border-t border-white/5 pt-20 pb-10 px-6 md:px-12 relative overflow-hidden">
 
@@ -36,10 +59,10 @@ const Footer = () => {
                 <div className="flex flex-col gap-6">
                     <h4 className="text-white font-bold text-lg">Explora</h4>
                     <div className="flex flex-col gap-3">
-                        <a href="#inicio" className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block">Inicio</a>
-                        <a href="#clases" className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block">Clases</a>
-                        <a href="#nosotros" className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block">Nosotros</a>
-                        <a href="#blog" className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block">Blog</a>
+                        <a href="#inicio" onClick={(e) => handleNavClick(e, '#inicio')} className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block cursor-pointer">Inicio</a>
+                        <a href="#clases" onClick={(e) => handleNavClick(e, '#clases')} className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block cursor-pointer">Clases</a>
+                        <a href="#nosotros" onClick={(e) => handleNavClick(e, '#nosotros')} className="text-gray-500 hover:text-white hover:translate-x-2 transition-all block cursor-pointer">Nosotros</a>
+                        {/* Blog link removed or pointed to home for now as it doesn't exist yet */}
                     </div>
                 </div>
 
